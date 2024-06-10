@@ -1,0 +1,169 @@
+@import "./components/index.css";
+
+html,
+body {
+  min-height: 100%;
+  font-size: 10px;
+}
+
+body {
+  --color-white: #ffffff;
+  --color-light-green: #f0f5f2;
+  --color-green: #b9d2c5;
+  --color-cloudy-grey: #666968;
+  --color-black: #1a1512;
+
+  position: relative;
+  padding: 20px 0;
+  overflow-x: hidden;
+  color: var(--color-black);
+  font-weight: 400;
+  font-family: Cambay, Calibri, sans-serif;
+  font-style: normal;
+  background: linear-gradient(
+    var(--color-light-green) 0%,
+    var(--color-white) 100%
+  );
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.6rem;
+}
+
+.heading-section {
+  margin-bottom: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.colored {
+  color: var(--color-green);
+}
+
+.cv {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 1.8rem;
+  background-color: var(--color-white);
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.period {
+  display: inline-block;
+  margin-left: 4px;
+  padding-left: 6px;
+  color: var(--color-cloudy-grey);
+  border-left: 1px solid var(--color-cloudy-grey);
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-areas:
+    "aboutMe aboutMe"
+    "skills skills"
+    "education education"
+    "languages languages"
+    "experience experience";
+  padding: 20px;
+  border: 1px solid var(--color-cloudy-grey);
+  row-gap: 24px;
+}
+
+.about-me {
+  grid-area: aboutMe;
+}
+
+.education {
+  grid-area: education;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.languages {
+  grid-area: languages;
+}
+
+.experience {
+  grid-area: experience;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 80px 0;
+  }
+
+  body::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-image: repeating-linear-gradient(
+      95deg,
+      transparent,
+      transparent 11px,
+      var(--color-green) 12px,
+      var(--color-green) 20px
+    );
+    border-radius: 50%;
+    transform: translateY(-100px) rotate(45deg);
+  
+    transform-origin: 50% 50%;
+    opacity: 0.25;
+    content: "";
+  }
+  
+  body::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    background: rgba(185, 210, 197, 0.75);
+    border-radius: 60% 40% 60% 40% / 40% 40% 50% 40%;
+    box-shadow: -30px 18px 0 75px rgba(185, 210, 197, 0.25);
+    transform: translateX(190px) translateY(-170px);
+    content: "";
+  }
+  
+  h2 {
+    font-size: 4rem;
+  }
+  
+  h3 {
+    font-size: 3.2rem;
+  }
+
+  .cv {
+    padding: 20px 80px;
+  }
+
+  .header {
+    margin-bottom: 50px;
+  }
+
+  .content-wrapper {
+    grid-template-areas: "aboutMe aboutMe" "skills education" "languages education" "experience experience";
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 40px;
+    column-gap: 20px;
+  }
+}

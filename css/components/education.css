@@ -1,0 +1,36 @@
+.education__title {
+  color: var(--color-green);
+}
+
+.education__schoolName {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.educationList > li {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .educationList > li::before {
+    position: absolute;
+    top: 3px;
+    left: -22px;
+    width: 16px;
+    height: 16px;
+    background: var(--color-green);
+    border-radius: 50%;
+    content: "";
+  }
+
+  .educationList > li:not(:last-child)::after {
+    position: absolute;
+    top: 3px;
+    left: -14px;
+    width: 1px;
+    height: 100%;
+    background: var(--color-green);
+    content: "";
+  }
+}

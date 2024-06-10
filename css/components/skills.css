@@ -1,0 +1,24 @@
+.skillsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 10px;
+}
+
+.skillsList > li {
+  text-transform: uppercase;
+}
+
+.skillsList li:nth-child(odd) {
+  justify-self: end;
+}
+
+.skillsList li:nth-child(even) {
+  justify-self: start;
+}
+
+@media screen and (min-width: 768px) {
+  .skillsList {
+    column-gap: 16px;
+  }
+}

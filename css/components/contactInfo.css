@@ -1,0 +1,37 @@
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-info__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+  margin-bottom: 10px;
+  padding: 6px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.contact-info__icon {
+  margin-bottom: 16px;
+  font-size: 2.2rem;
+}
+
+.contact-info__text {
+  color: var(--color-cloudy-grey);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-info {
+    flex-wrap: nowrap;
+  }
+
+  .contact-info__item {
+    width: auto;
+    margin-bottom: 0px;
+    font-size: 1.8rem;
+  }
+}
